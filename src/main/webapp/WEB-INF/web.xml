@@ -27,7 +27,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    
+
     <!--Add database config file-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
