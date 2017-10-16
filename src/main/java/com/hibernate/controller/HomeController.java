@@ -14,18 +14,18 @@ import java.sql.SQLException;
 @Controller
 public class HomeController {
 
-    @Autowired
-    private DataSource myDataSource;
+//    @Autowired
+//    private DataSource myDataSource;
 
     @RequestMapping("/")
     public String home(){
-
-        try {
-            Connection connection = myDataSource.getConnection();
-            System.out.println("Succsessful connection");
-        } catch (SQLException e) {
-            System.out.println("Connection failed");
-        }
+//
+//        try {
+//            Connection connection = myDataSource.getConnection();
+//            System.out.println("Succsessful connection");
+//        } catch (SQLException e) {
+//            System.out.println("Connection failed");
+//        }
 
         return "home";
     }

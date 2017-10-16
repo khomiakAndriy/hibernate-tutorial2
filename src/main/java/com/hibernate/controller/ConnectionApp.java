@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class ConnectionApp {
     public static void main(String[] args) {
-        String jdbcUrl = "jdbc:mysql://localhost:3307/bookstore_db?useSSL=false";
+        String jdbcUrl = "jdbc:mysql://localhost:3307/hibernate_db?useSSL=false";
         String user = "login";
         String pass = "password";
 
