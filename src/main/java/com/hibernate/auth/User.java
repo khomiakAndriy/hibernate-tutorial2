@@ -1,4 +1,4 @@
-package com.hibernate.entity;
+package com.hibernate.auth;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
