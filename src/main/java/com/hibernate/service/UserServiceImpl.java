@@ -16,4 +16,8 @@ public class UserServiceImpl implements UserService {
     public void create(User user) {
         userDao.create(user);
     }
+
+    public boolean userExists(String username) {
+        return userDao.userExists(username);
+    }
 }

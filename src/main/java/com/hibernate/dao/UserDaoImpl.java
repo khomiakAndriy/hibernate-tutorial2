@@ -30,4 +30,11 @@ public class UserDaoImpl implements UserDao  {
         queryAuthority.executeUpdate();
     }
 
+    @Transactional
+    public boolean userExists(String username) {
+        Session session = sessionFactory.getCurrentSession();
+
+        return false;
+    }
+
 }
