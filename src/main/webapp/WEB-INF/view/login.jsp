@@ -28,6 +28,8 @@
                                    value="Login"/></td>
         </tr>
     </table>
+
+    <p><a href="${pageContext.request.contextPath}/newaccount">Create account</a></p>
 </form>
 </body>
 </html>

@@ -9,10 +9,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-          <root url="file://$MODULE_DIR$/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
@@ -32,7 +28,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -71,6 +67,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.2.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:4.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:4.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" level="project" />

@@ -16,6 +16,10 @@ public class HomeController {
 
 //    @Autowired
 //    private DataSource myDataSource;
+    @RequestMapping("/admin")
+    public String showAdmni(){
+        return "admin";
+    }
 
     @RequestMapping("/")
     public String home(){
