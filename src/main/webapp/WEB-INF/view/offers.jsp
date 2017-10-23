@@ -33,5 +33,7 @@
     </c:forEach>
 </table>
 
+<p><a href="<c:url value = '/j_spring_security_logout'/>">Log Out</a></p>
+
 </body>
 </html>

@@ -24,6 +24,11 @@ public class LoginController {
         return "login";
     }
 
+    @RequestMapping("/logout")
+    public String logout() {
+        return "logout";
+    }
+
     @RequestMapping("/newaccount")
     public String newaccount(Model model) {
         model.addAttribute("user", new User());
