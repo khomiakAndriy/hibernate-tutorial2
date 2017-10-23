@@ -53,7 +53,9 @@ public class LoginController {
 //            result.rejectValue("username", "DublicateKey.user.username", "This username already exists!");
 //            return "newaccount";
 //        }
-        return "offercreated";
+
+        userService.create(user);
+        return "accountcreated";
     }
 
 }

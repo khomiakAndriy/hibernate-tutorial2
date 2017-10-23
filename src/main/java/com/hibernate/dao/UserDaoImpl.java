@@ -33,8 +33,9 @@ public class UserDaoImpl implements UserDao  {
     @Transactional
     public boolean userExists(String username) {
         Session session = sessionFactory.getCurrentSession();
-
-        return false;
+        Query query = session.createNativeQuery("select * from users where username=:username");
+        query.setParameter("username", username);
+        return (query.uniqueResult()!=null);
     }
 
 }
