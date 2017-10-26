@@ -7,19 +7,20 @@
           http://www.springframework.org/schema/security/spring-security-4.2.xsd">
 
     <security:authentication-manager>
-        <security:authentication-provider>
-            <security:user-service>
-                <security:user name="Anzey" authorities="ROLE_ADMIN" password="password"/>
-                <security:user name="Nata" authorities="ROLE_ADMIN" password="1111"/>
-            </security:user-service>
-        </security:authentication-provider>
+        <!--<security:authentication-provider>-->
+        <!--<security:user-service>-->
+        <!--<security:user name="Anzey" authorities="ROLE_ADMIN" password="password"/>-->
+        <!--<security:user name="Nata" authorities="ROLE_ADMIN" password="1111"/>-->
+        <!--</security:user-service>-->
+        <!--</security:authentication-provider>-->
 
         <!--Make case sencetive username-->
         <security:authentication-provider>
             <security:jdbc-user-service data-source-ref="myDataSource"
-                                        users-by-username-query="select username, password, enabled from users where binary username = ?"
-                                        authorities-by-username-query="select username, authority from authorities where binary username = ?"
-                                        />
+                                        users-by-username-query="SELECT username, password, enabled FROM users WHERE BINARY username = ?"
+                                        authorities-by-username-query="SELECT username, authority FROM authorities WHERE BINARY username = ?"
+                                        id="idForRememberMe"
+            />
 
         </security:authentication-provider>
 
@@ -51,6 +52,10 @@
         <security:logout logout-success-url="/logout" logout-url="/j_spring_security_logout"/>
 
         <security:csrf disabled="true"/>
+        <security:remember-me
+                key="offerKeyApp"
+                user-service-ref="idForRememberMe"
+                remember-me-parameter="_spring_security_remember_me"/>
 
     </security:http>
 </beans>
