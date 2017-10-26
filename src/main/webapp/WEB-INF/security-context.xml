@@ -16,12 +16,14 @@
 
         <!--Make case sencetive username-->
         <security:authentication-provider>
+
             <security:jdbc-user-service data-source-ref="myDataSource"
                                         users-by-username-query="SELECT username, password, enabled FROM users WHERE BINARY username = ?"
                                         authorities-by-username-query="SELECT username, authority FROM authorities WHERE BINARY username = ?"
                                         id="idForRememberMe"
-            />
 
+            />
+            <security:password-encoder ref="passwordEncoder"/>
         </security:authentication-provider>
 
     </security:authentication-manager>
@@ -58,4 +60,5 @@
                 remember-me-parameter="_spring_security_remember_me"/>
 
     </security:http>
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"/>
 </beans>
